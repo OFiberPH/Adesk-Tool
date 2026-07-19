@@ -150,25 +150,27 @@ do {
 
     Clear-Host
     Write-Host ""
-    Write-Host "==================================================" -ForegroundColor Cyan
-    Write-Host "                                                  " -ForegroundColor Green               
-    Write-Host "     _       _           _      _____           _ " -ForegroundColor Green
-    Write-Host "    / \   __| | ___  ___| | __ |_   _|__   ___ | |" -ForegroundColor Green
-    Write-Host "   / _ \ / _  |/ _ \/ __| |/ /   | |/ _ \ / _ \| |" -ForegroundColor Green
-    Write-Host "  / ___ \ (_| |  __/\__ \   <    | | (_) | (_) | |" -ForegroundColor Green
-    Write-Host " /_/   \_\__,_|\___||___/_|\_\   |_|\___/ \___/|_|" -ForegroundColor Green
-    Write-Host "                                                  " -ForegroundColor Green
-    Write-Host "          AnyDesk Reset/Backup Tool               " -ForegroundColor Yellow
-    Write-Host "                                                  " -ForegroundColor Green
-    Write-Host "==================================================" -ForegroundColor Cyan
+    Write-Host "  ==================================================" -ForegroundColor Cyan
+    Write-Host "     _       _           _      _____           _  " -ForegroundColor Green
+    Write-Host "    / \   __| | ___  ___| | __ |_   _|__   ___ | | " -ForegroundColor Green
+    Write-Host "   / _ \ / _  |/ _ \/ __| |/ /   | |/ _ \ / _ \| | " -ForegroundColor Green
+    Write-Host "  / ___ \ (_| |  __/\__ \   <    | | (_) | (_) | | " -ForegroundColor Green
+    Write-Host " /_/   \_\__,_|\___||___/_|\_\   |_|\___/ \___/|_| " -ForegroundColor Green
+    Write-Host "  ==================================================" -ForegroundColor Cyan
+    Write-Host "            AnyDesk Reset / Backup Tool            " -ForegroundColor Yellow
+    Write-Host "          github.com/OFiberPH/Adesk-Tool          " -ForegroundColor DarkGray
+    Write-Host "  ==================================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host " [1] Reset AnyDesk (keep user.conf)" -ForegroundColor White
-    Write-Host " [2] Clean Reset AnyDesk (backup first, remove user.conf)" -ForegroundColor White
-    Write-Host " [3] Backup user.conf" -ForegroundColor White
-    Write-Host " [4] Restore user.conf from backup" -ForegroundColor White
-    Write-Host " [5] Exit" -ForegroundColor White
+    Write-Host "   Backups: " -ForegroundColor DarkCyan -NoNewline; Write-Host $backupDir -ForegroundColor Gray
     Write-Host ""
-    $choice = Read-Host "Select option (1-5)"
+    Write-Host "   [1] Reset AnyDesk          " -ForegroundColor White -NoNewline; Write-Host "(keep user.conf)" -ForegroundColor DarkGray
+    Write-Host "   [2] Clean Reset AnyDesk    " -ForegroundColor White -NoNewline; Write-Host "(backup + remove user.conf)" -ForegroundColor DarkGray
+    Write-Host "   [3] Backup user.conf" -ForegroundColor White
+    Write-Host "   [4] Restore user.conf      " -ForegroundColor White -NoNewline; Write-Host "(from a saved backup)" -ForegroundColor DarkGray
+    Write-Host "   [5] Exit" -ForegroundColor White
+    Write-Host ""
+    Write-Host "  --------------------------------------------------" -ForegroundColor DarkGray
+    $choice = Read-Host "   Select option (1-5)"
 
     switch ($choice) {
         '1' {

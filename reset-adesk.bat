@@ -18,24 +18,27 @@ set "ANYDESK_EXE=%ProgramFiles(x86)%\AnyDesk\AnyDesk.exe"
 
 :menu
 cls
-echo ==================================================
-echo.
-echo      _       _           _      _____           _ 
+echo   ==================================================
+echo      _       _           _      _____           _
 echo     / \   __^| ^| ___  ___^| ^| __ ^|_   _^|__   ___ ^| ^|
 echo    / _ \ / _` ^|/ _ \/ __^| ^|/ /   ^| ^|/ _ \ / _ \^| ^|
 echo   / ___ \ (_^| ^|  __/\__ \   ^<    ^| ^| (_) ^| (_) ^| ^|
 echo  /_/   \_\__,_^|\___^|^|___/_^|\_\   ^|_^|\___/ \___/^|_^|
+echo   ==================================================
+echo             AnyDesk Reset / Backup Tool
+echo           github.com/OFiberPH/Adesk-Tool
+echo   ==================================================
 echo.
-echo         AnyDesk Reset / Backup Tool
-echo ==================================================
+echo    Backups: %BACKUPDIR%
 echo.
-echo [1] Reset AnyDesk (keep user.conf)
-echo [2] Clean Reset AnyDesk (backup first, remove user.conf)
-echo [3] Backup user.conf
-echo [4] Restore user.conf from backup
-echo [5] Exit
+echo    [1] Reset AnyDesk          (keep user.conf)
+echo    [2] Clean Reset AnyDesk    (backup + remove user.conf)
+echo    [3] Backup user.conf
+echo    [4] Restore user.conf      (from a saved backup)
+echo    [5] Exit
 echo.
-set /p choice=Select option (1-5): 
+echo   --------------------------------------------------
+set /p choice=   Select option (1-5):
 
 if "%choice%"=="1" goto reset
 if "%choice%"=="2" goto cleanreset
